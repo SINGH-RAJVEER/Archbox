@@ -1,5 +1,5 @@
 [package]
-name = "Archbox"
+name = "ArchBox"
 version = "0.1.0"
 edition = "2021"
 description = "A curated repository manager for essential Arch Linux tools"
@@ -8,31 +8,29 @@ keywords = ["arch", "linux", "package", "manager", "cli"]
 categories = ["command-line-utilities"]
 
 [dependencies]
-# CLI framework
 clap = { version = "4.4", features = ["derive", "color"] }
-# Async runtime
 tokio = { version = "1.0", features = ["full"] }
-# HTTP client for downloads
 reqwest = { version = "0.11", features = ["json"] }
-# Serialization
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 serde_yaml = "0.9"
-# Terminal UI
 indicatif = "0.17"
 console = "0.15"
-# Error handling
 anyhow = "1.0"
 thiserror = "1.0"
-# Logging
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
-# File system operations
 walkdir = "2.4"
-# Configuration
 directories = "5.0"
-# Process execution
 tokio-process = "0.2"
+sha2 = "0.10"
+tempfile = "3.8"
+dirs = "5.0"
+shellexpand = "3.1"
+chrono = { version = "0.4", features = ["serde"] }
+dialoguer = "0.11"
+clap_complete = "4.4"
+fuzzy-matcher = "0.3"
 
 [dev-dependencies]
 tempfile = "3.8"
